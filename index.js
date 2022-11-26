@@ -1,11 +1,12 @@
 const colors=require('colors')
+const data=require('./data')
 
 const http = require('http');
 
-http.createServer((req,resp) =>
-{
-resp.write("<h1>Code Step by step</h1>");
-resp.end();
-}).listen(4500);
+http.createServer((_req,resp) =>{
+    resp.writeHead(200,{'Content-Type':'application\json'});
+    resp.write(JSON.stringify(data));
+    resp.end();
+}).listen(5000);
 
-console.log("Hello".red + " Vivek Srivas   tava".green) 
+console.log("Hello".red + " Vivek Srivastava".green) 
