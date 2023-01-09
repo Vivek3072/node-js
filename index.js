@@ -7,7 +7,7 @@ app.get("", (req, resp) => {
 });
 
 app.get("/about", (req, resp) => {
-    resp.send("Welcome, This is a About Page");
+    resp.send("Welcome, This is an About Page");
 });
 
 app.get("/help", (req, resp) => {
